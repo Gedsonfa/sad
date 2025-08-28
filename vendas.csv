@@ -1,0 +1,8 @@
+dia_semana,quantidade,preco_unitario,receita_total,observacoes
+segunda-feira,120,0.50,60.00,vendas matinais atendidas
+terça-feira,150,0.50,75.00,promoção: "leve 5 pague 4"
+quarta-feira,130,0.50,65.00,produto fresco
+quinta-feira,140,0.50,70.00,estoque baixo pela manhã
+sexta-feira,200,0.50,100.00,alta demanda
+sábado,250,0.50,125.00,feira local aumentou vendas
+domingo,180,0.50,90.00,sem promoções
