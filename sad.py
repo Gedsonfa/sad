@@ -1,16 +1,18 @@
 # Import packages
+import streamlit as st
 from dash import Dash, html, dash_table, dcc
 import pandas as pd
 import plotly.express as px
+from streamlit_dash import DashRenderer  # Updated import
 
-# Incorporate data
+# Carregar dados
 df = pd.read_csv('vendas.csv')
 
-# Initialize the app
-app = Dash()
+# Inicializar o app Dash
+dash_app = Dash(__name__)
 
-# App layout (wrap in Div)
-app.layout = html.Div([
+# Layout do Dash
+dash_app.layout = html.Div([
     html.H1(children='Relatório de Vendas de Pão na Semana'),
 
     # Tabela de dados
@@ -44,6 +46,6 @@ app.layout = html.Div([
     )
 ])
 
-# Run the app
-if __name__ == '__main__':
-    app.run(debug=False, use_reloader=False)
+# Exibir no Streamlit
+st.title("Dashboard de Vendas")
+DashRenderer(dash_app, height=800).render()  # Updated line
