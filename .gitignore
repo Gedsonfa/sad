@@ -1,0 +1,62 @@
+# ===========================================
+# DJANGO
+# ===========================================
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+staticfiles/
+
+# Arquivos criados por collectstatic
+static/
+
+# Arquivos de ambiente local
+.env
+*.env
+
+# ===========================================
+# PYTHON
+# ===========================================
+*.py[cod]
+*$py.class
+.Python
+pythonenv/
+pip-log.txt
+pip-delete-this-directory.txt
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtualenv
+venv/
+env/
+ENV/
+.venv/
+
+# ===========================================
+# IDEs / EDITORES
+# ===========================================
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# ===========================================
+# SISTEMA
+# ===========================================
+.DS_Store
+Thumbs.db
