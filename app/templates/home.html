@@ -1,16 +1,61 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Home Page</title>
-    </head>
-        
-    <body>
-        <h1> Hello World! </h1>
-        <a href="{% url 'grafico_vendas_interativo'%}" class="btn btn-primary">Grafico de vendas 2024</a>
-        <h2>Produtos vendidos</h2>
-        <img src="{% url 'grafico_top_produtos' %}" alt="Gráfico Produtos">
-<h2>Produtos vendidos</h2>
-        <img src="{% url 'grafico_top_canais' %}" alt="Gráfico Canais">
-    </body>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Meu Sistema{% endblock %}</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            display: flex;
+        }
 
+        /* --- SIDEBAR --- */
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+
+        .sidebar a:hover {
+            background: #34495e;
+        }
+
+        /* --- CONTEÚDO --- */
+        .content {
+            margin-left: 240px; /* espaço da sidebar */
+            padding: 20px;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="/grafico">📊 Gráfico</a>
+        <a href="/grafico/top-canais/">📄 Canais</a>
+        <a href="/configuracoes">⚙️ Configurações</a>
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
 </html>

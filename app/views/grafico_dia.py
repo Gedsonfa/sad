@@ -38,3 +38,5 @@ def grafico_vendas_interativo(request):
         "grafico_mes": grafico_mes_html,
     })
 
+def pagina_grafico(request):
+    return render(request, "grafico_interativo.html")
