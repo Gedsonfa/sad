@@ -2,9 +2,12 @@ from django.shortcuts import render
 import pandas as pd
 import plotly.express as px
 from prophet import Prophet
+import os
+from django.conf import settings
+
 
 def grafico_vendas_interativo(request):
-    caminho_csv = '/home/gedson/Documents/github/djangoproject/app/data/vendas_2024_completas.csv'
+    caminho_csv = os.path.join(settings.BASE_DIR, "data", "vendas_2024_completas.csv")
 
     df = pd.read_csv(caminho_csv)
     df['data'] = pd.to_datetime(df['data'], format="%Y-%m-%d", errors='coerce')
