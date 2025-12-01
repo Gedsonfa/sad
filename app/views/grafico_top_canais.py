@@ -1,9 +1,11 @@
 from django.shortcuts import render
 import pandas as pd
 import plotly.express as px
+import os
+from django.conf import settings
 
 def grafico_top_canais(request):
-    caminho_csv = '/home/gedson/Documents/github/djangoproject/app/data/vendas_2024_completas.csv'
+    caminho_csv = os.path.join(settings.BASE_DIR, "app", "data", "vendas_2024_completas.csv")
 
     df = pd.read_csv(caminho_csv)
 
